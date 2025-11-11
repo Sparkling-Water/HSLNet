@@ -1,0 +1,6 @@
+datasets/Deepglobe/PATNet/1/test/origin
+datasets/Deepglobe/PATNet/2/test/origin
+datasets/Deepglobe/PATNet/3/test/origin
+datasets/Deepglobe/PATNet/4/test/origin
+datasets/Deepglobe/PATNet/5/test/origin
+datasets/Deepglobe/PATNet/6/test/origin

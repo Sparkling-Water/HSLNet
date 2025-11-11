@@ -1,0 +1,1 @@
+datasets/PASCAL/VOCdevkit/VOC2012/JPEGImages

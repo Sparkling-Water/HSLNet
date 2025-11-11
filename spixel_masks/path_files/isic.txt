@@ -1,0 +1,1 @@
+datasets/ISIC/ISIC2018_Task1-2_Training_Input
