@@ -1,5 +1,13 @@
-# Bridging Granularity Gaps: Hierarchical Semantic Learning for Cross-domain Few-shot Segmentation
+# [AAAI 2026] Bridging Granularity Gaps: Hierarchical Semantic Learning for Cross-domain Few-shot Segmentation
+[![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg?logo=arxiv)](https://arxiv.org/abs/2511.12200)
+
 Official code for AAAI 2026 paper: Bridging Granularity Gaps: Hierarchical Semantic Learning for Cross-domain Few-shot Segmentation
+
+![](./framework.png)
+
+## Abstract
+Cross-domain Few-shot Segmentation (CD-FSS) aims to segment novel classes from target domains that are not involved in training and have significantly different data distributions from the source domain, using only a few annotated samples, and recent years have witnessed significant progress on this task. However, existing CD-FSS methods primarily focus on style gaps between source and target domains while ignoring segmentation granularity gaps, resulting in insufficient semantic discriminability for novel classes in target domains. Therefore, we propose a Hierarchical Semantic Learning (HSL) framework to tackle this problem. Specifically, we introduce a Dual Style Randomization (DSR) module and a Hierarchical Semantic Mining (HSM) module to learn hierarchical semantic features, thereby enhancing the model's ability to recognize semantics at varying granularities. DSR simulates target domain data with diverse foreground-background style differences and overall style variations through foreground and global style randomization respectively, while HSM leverages multi-scale superpixels to guide the model to mine intra-class consistency and inter-class distinction at different granularities. Additionally, we also propose a Prototype Confidence-modulated Thresholding (PCMT) module to mitigate segmentation ambiguity when foreground and background are excessively similar. Extensive experiments are conducted on four popular target domain datasets, and the results demonstrate that our method achieves state-of-the-art performance.
+
 
 ## Datasets
 You can follow [PATNet](https://github.com/slei109/PATNet) to prepare the source domain and target domain datasets.
@@ -44,16 +52,23 @@ You can follow [PATNet](https://github.com/slei109/PATNet) to prepare the source
 
     Direct: https://drive.google.com/file/d/16TgqOeI_0P41Eh3jWQlxlRXG9KIqtMgI/view
 
+## Pretrained model
+Download the model weights of [ResNet-50](https://drive.google.com/file/d/11yONyypvBEYZEh9NIOJBGMdiLLAgsMgj/view) and [ViT-B/16-384](https://storage.googleapis.com/vit_models/augreg/B_16-i1k-300ep-lr_0.001-aug_medium1-wd_0.1-do_0.0-sd_0.0--imagenet2012-steps_20k-lr_0.01-res_384.npz), and organize them as follows.
+> ```bash
+> ~/.cache/torch/hub/checkpoints/
+>       resnet50.pth
+>       B_16-i1k-300ep-lr_0.001-aug_medium1-wd_0.1-do_0.0-sd_0.0--imagenet2012-steps_20k-lr_0.01-res_384.npz
+> ```
 
 ## Run the code
 ### Generating Spixel Masks
 > ```bash
-> python3 generate_spixel.py --dataset lung
+> python generate_spixel.py --dataset lung
 > ```
 
 ### Training
 > ```bash
-> CUDA_VISIBLE_DEVICES=0 python -W ignore train.py --datapath ./datasets --backbone vit_b --size 480 --batch-size 8 --episode 6000 --shot 1 --perturb
+> CUDA_VISIBLE_DEVICES=0 python -W ignore train.py --dataset lung --datapath ./datasets --backbone vit_b --size 480 --batch-size 8 --episode 6000 --shot 1 --perturb
 > ```
 
 ### Testing
@@ -63,4 +78,4 @@ You can follow [PATNet](https://github.com/slei109/PATNet) to prepare the source
 
 
 ## Acknowledgement
-Our code is built upon the foundations of [SSP](https://github.com/fanq15/SSP), [PATNet](https://github.com/slei109/PATNet), [CDSpixel](https://github.com/rookiie/CDSpixel), [ABCDFSS](https://github.com/Vision-Kek/ABCDFSS) and [GPRN](https://github.com/CVL-hub/GPRN), we appreciate the authors for their excellent contributions!
+Our code is built upon the foundations of [SSP](https://github.com/fanq15/SSP), [FPTrans](https://github.com/Jarvis73/FPTrans/tree/main), [PATNet](https://github.com/slei109/PATNet), [CDSpixel](https://github.com/rookiie/CDSpixel), [ABCDFSS](https://github.com/Vision-Kek/ABCDFSS) and [GPRN](https://github.com/CVL-hub/GPRN), we appreciate the authors for their excellent contributions!

@@ -75,20 +75,20 @@ vit_configs = {
 pretrained_dir = Path(os.path.expanduser("~/.cache/torch/hub/checkpoints"))
 
 pretrained_weights = {
-    "ViT-B/8":          pretrained_dir / "vit/B_8-i21k-300ep-lr_0.001-aug_medium1-wd_0.1-do_0.0-sd_0.0--imagenet2012-steps_20k-lr_0.01-res_224.npz",
-    "ViT-B/16":         pretrained_dir / "vit/B_16-i1k-300ep-lr_0.001-aug_medium1-wd_0.1-do_0.0-sd_0.0--imagenet2012-steps_20k-lr_0.01-res_224.npz",
-    "ViT-B/16-384":     pretrained_dir / "vit/B_16-i1k-300ep-lr_0.001-aug_medium1-wd_0.1-do_0.0-sd_0.0--imagenet2012-steps_20k-lr_0.01-res_384.npz",
-    "ViT-B/16-i21k":    pretrained_dir / "vit/B_16-i21k-300ep-lr_0.001-aug_medium1-wd_0.1-do_0.0-sd_0.0--imagenet2012-steps_20k-lr_0.01-res_224.npz",
-    "ViT-B/16-i21k-384":pretrained_dir / "vit/B_16-i21k-300ep-lr_0.001-aug_medium1-wd_0.1-do_0.0-sd_0.0--imagenet2012-steps_20k-lr_0.01-res_384.npz",
-    "ViT-S/16":         pretrained_dir / "vit/S_16-i1k-300ep-lr_0.001-aug_light1-wd_0.03-do_0.0-sd_0.0--imagenet2012-steps_20k-lr_0.03-res_224.npz",
-    "ViT-S/16-i21k":    pretrained_dir / "vit/S_16-i21k-300ep-lr_0.001-aug_light1-wd_0.03-do_0.0-sd_0.0--imagenet2012-steps_20k-lr_0.03-res_224.npz",
-    "ViT-L/16":         pretrained_dir / "vit/L_16-i1k-300ep-lr_0.001-aug_medium1-wd_0.1-do_0.1-sd_0.1--imagenet2012-steps_20k-lr_0.01-res_224.npz",
-    "ViT-L/16-384":     pretrained_dir / "vit/L_16-i1k-300ep-lr_0.001-aug_medium1-wd_0.1-do_0.1-sd_0.1--imagenet2012-steps_20k-lr_0.01-res_384.npz",
+    "ViT-B/8":          pretrained_dir / "B_8-i21k-300ep-lr_0.001-aug_medium1-wd_0.1-do_0.0-sd_0.0--imagenet2012-steps_20k-lr_0.01-res_224.npz",
+    "ViT-B/16":         pretrained_dir / "B_16-i1k-300ep-lr_0.001-aug_medium1-wd_0.1-do_0.0-sd_0.0--imagenet2012-steps_20k-lr_0.01-res_224.npz",
+    "ViT-B/16-384":     pretrained_dir / "B_16-i1k-300ep-lr_0.001-aug_medium1-wd_0.1-do_0.0-sd_0.0--imagenet2012-steps_20k-lr_0.01-res_384.npz",
+    "ViT-B/16-i21k":    pretrained_dir / "B_16-i21k-300ep-lr_0.001-aug_medium1-wd_0.1-do_0.0-sd_0.0--imagenet2012-steps_20k-lr_0.01-res_224.npz",
+    "ViT-B/16-i21k-384":pretrained_dir / "B_16-i21k-300ep-lr_0.001-aug_medium1-wd_0.1-do_0.0-sd_0.0--imagenet2012-steps_20k-lr_0.01-res_384.npz",
+    "ViT-S/16":         pretrained_dir / "S_16-i1k-300ep-lr_0.001-aug_light1-wd_0.03-do_0.0-sd_0.0--imagenet2012-steps_20k-lr_0.03-res_224.npz",
+    "ViT-S/16-i21k":    pretrained_dir / "S_16-i21k-300ep-lr_0.001-aug_light1-wd_0.03-do_0.0-sd_0.0--imagenet2012-steps_20k-lr_0.03-res_224.npz",
+    "ViT-L/16":         pretrained_dir / "L_16-i1k-300ep-lr_0.001-aug_medium1-wd_0.1-do_0.1-sd_0.1--imagenet2012-steps_20k-lr_0.01-res_224.npz",
+    "ViT-L/16-384":     pretrained_dir / "L_16-i1k-300ep-lr_0.001-aug_medium1-wd_0.1-do_0.1-sd_0.1--imagenet2012-steps_20k-lr_0.01-res_384.npz",
 
-    "DeiT-T/16":        pretrained_dir / "deit/deit_tiny_distilled_patch16_224-b40b3cf7.pth",
-    "DeiT-S/16":        pretrained_dir / "deit/deit_small_distilled_patch16_224-649709d9.pth",
-    "DeiT-B/16":        pretrained_dir / "deit/deit_base_distilled_patch16_224-df68dfff.pth",
-    "DeiT-B/16-384":    pretrained_dir / "deit/deit_base_distilled_patch16_384-d0272ac0.pth",
+    "DeiT-T/16":        pretrained_dir / "deit_tiny_distilled_patch16_224-b40b3cf7.pth",
+    "DeiT-S/16":        pretrained_dir / "deit_small_distilled_patch16_224-649709d9.pth",
+    "DeiT-B/16":        pretrained_dir / "deit_base_distilled_patch16_224-df68dfff.pth",
+    "DeiT-B/16-384":    pretrained_dir / "deit_base_distilled_patch16_384-d0272ac0.pth",
 }
 
 model_urls = {
